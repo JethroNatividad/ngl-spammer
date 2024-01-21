@@ -25,7 +25,6 @@ async def request():
 
 async def main():
     tasks = [request() for _ in range(times)]
-    # Use asyncio.gather to run all the tasks concurrently
     await asyncio.gather(*tasks)
 
 
