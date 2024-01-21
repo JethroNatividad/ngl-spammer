@@ -2,6 +2,11 @@
 
 NGL Spammer is a command-line interface (CLI) application written in Python that allows you to spam people in the NGL community with a specified username and count.
 
+## Performance
+
+This NGL Spammer is designed for high-speed performance, leveraging the power of `aiohttp` and `asyncio`. It is optimized to quickly send multiple requests concurrently, making it an insanely fast tool for its intended purpose.
+
+
 ## Installation
 
 1. Clone the repository:
