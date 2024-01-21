@@ -45,11 +45,6 @@ NGL Spammer is a command-line interface (CLI) application written in Python that
 
 To run the NGL Spammer, use the following command:
 
-```bash
-python main.py
-```
-
-## Alternatively, you can run the file directly:
 
 ```bash
 python main.py --username <target_username> --count <spam_count>
@@ -61,6 +56,12 @@ Replace `<target_username>` with the NGL username you want to spam and `<spam_co
 
 ```bash
 python main.py --username john_doe --count 100
+```
+
+### Alternatively, you can run the file directly:
+
+```bash
+python main.py
 ```
 
 ### Additional Options:
