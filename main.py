@@ -5,7 +5,7 @@ import uuid
 import random
 
 # https://ngl.link/api/submit
-times = 10
+times = 500
 
 async def send_message(username, questions):
     try:
