@@ -34,4 +34,4 @@ asyncio.run(main())
 end = time.time()
 
 seconds = end - start
-print("Took {seconds} seconds to send {times} messages.")
+print(f"Took {seconds} seconds to send {times} messages.")
