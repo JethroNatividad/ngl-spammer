@@ -4,8 +4,9 @@ NGL Spammer is a command-line interface (CLI) application written in Python that
 
 ## Performance
 
-This NGL Spammer is designed for high-speed performance, leveraging the power of `aiohttp` and `asyncio`. It is optimized to quickly send multiple requests concurrently, making it an insanely fast tool for its intended purpose.
+This NGL Spammer is optimized for exceptional speed, capable of sending 100 messages in just 1 to 3 seconds. Leveraging the power of `aiohttp` and `asyncio`, it excels in quickly and efficiently sending multiple requests concurrently.
 
+![ngl_spammer-sample](./sample.png)
 
 ## Installation
 

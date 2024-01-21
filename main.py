@@ -17,7 +17,7 @@ async def send_message(username, questions):
                 "deviceId": random_device_id
             }
             async with session.post(url="https://ngl.link/api/submit", data=data):
-                print(f"Sent {random_question} to @{username} as {random_device_id}")
+                print(f"Sent '{random_question}' to @{username}.                               ", end="\r")
     except Exception as e:
         print(e)
 
@@ -38,7 +38,7 @@ def main(username, count):
     end = time.time()
 
     seconds = end - start
-    print(f"Took {seconds} seconds to send {count} messages.")
+    print(f"\nTook {seconds} seconds to send {count} messages.")
 
 f = Figlet(font='slant')
 print(f.renderText('NGL SPAMMER'))
