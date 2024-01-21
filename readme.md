@@ -77,6 +77,12 @@ python main.py
 python main.py --help
 ```
 
+## Customizing Messages
+
+You can customize the messages sent by editing the `messages.txt` file. Each line in this file represents a separate message, and the spambot will randomly select messages from this file to send.
+
+To add or remove messages, simply edit the `messages.txt` file with your desired texts.
+
 ## Disclaimer
 
 **Use this tool responsibly!** The NGL Spammer is intended for educational and testing purposes only. Misuse of this tool for spamming or any malicious activities is strictly discouraged. The developer is not responsible for any consequences resulting from the misuse of this application.
