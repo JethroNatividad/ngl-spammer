@@ -47,6 +47,5 @@ async def spam(username, count):
 def main(username, count):
     asyncio.run(spam(username, count))
 
-f = Figlet(font='slant')
-print(f.renderText('NGL SPAMMER'))
+print(Figlet(font='slant').renderText('NGL SPAMMER'))
 main()
