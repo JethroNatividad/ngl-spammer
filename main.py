@@ -23,8 +23,8 @@ async def send_message(username, questions):
 
 
 async def spam(username, count):
-        badwords = [line.strip() for line in open('messages.txt', 'r')]
-        tasks = [send_message(username, badwords) for _ in range(count)]
+        messages = [line.strip() for line in open('messages.txt', 'r')]
+        tasks = [send_message(username, messages) for _ in range(count)]
         await asyncio.gather(*tasks)
 
 @click.command()
