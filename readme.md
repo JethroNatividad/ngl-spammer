@@ -6,21 +6,40 @@ NGL Spammer is a command-line interface (CLI) application written in Python that
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/JethroNatividad/ngl-spammer.git
-```
+    ```bash
+    git clone https://github.com/JethroNatividad/ngl-spammer.git
+    ```
 
 2. Navigate to the project directory:
 
-```bash
-cd ngl-spammer
-```
+    ```bash
+    cd ngl-spammer
+    ```
+3. Create a virtual environment:
 
-3. Install the required dependencies using pip:
+    ```bash
+    python -m venv env
+    ```
 
-```bash
-pip install -r requirements.txt
-```
+4. Activate the virtual environment:
+
+    On Windows:
+
+    ```bash
+    .\env\Scripts\activate
+    ```
+
+    On Linux and Mac:
+
+    ```bash
+    source env/bin/activate
+    ```
+
+5. Install the required dependencies using pip:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
