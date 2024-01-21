@@ -1,6 +1,6 @@
 import aiohttp
 import asyncio
-
+import time
 # https://ngl.link/api/submit
 
 username = "cottonfarmer112"
@@ -20,4 +20,14 @@ async def request():
     except Exception as e:
         print(e)
 
-asyncio.run(request())
+async def main():
+    tasks = [request() for _ in range(10)]
+    # Use asyncio.gather to run all the tasks concurrently
+    await asyncio.gather(*tasks)
+
+
+start = time.time()
+asyncio.run(main())
+end = time.time()
+
+print("Took {} seconds to send".format(end - start))
