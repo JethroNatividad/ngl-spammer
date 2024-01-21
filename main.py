@@ -8,8 +8,6 @@ import uuid
 username = "cottonfarmer112"
 question = "cottonfarmer112"
 
-
-
 async def request():
     try:
         async with aiohttp.ClientSession() as session:
@@ -24,7 +22,7 @@ async def request():
         print(e)
 
 async def main():
-    tasks = [request() for _ in range(10)]
+    tasks = [request() for _ in range(100)]
     # Use asyncio.gather to run all the tasks concurrently
     await asyncio.gather(*tasks)
 
