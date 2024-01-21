@@ -38,7 +38,7 @@ async def spam(username, count):
         # Count the number of success status
         success = results.count(200)
         seconds = end - start
-        print(f"\nTook {seconds} seconds to send {success} messages.")
+        print(f"\nTook {seconds} seconds to send {success} out of {count} messages.")
         
 @click.command()
 @click.option('--username', prompt='NGL Username',
