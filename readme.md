@@ -51,3 +51,7 @@ python main.py --username john_doe --count 100
 ```bash
 python main.py --help
 ```
+
+## Disclaimer
+
+**Use this tool responsibly!** The NGL Spammer is intended for educational and testing purposes only. Misuse of this tool for spamming or any malicious activities is strictly discouraged. The developer is not responsible for any consequences resulting from the misuse of this application.
