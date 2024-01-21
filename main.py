@@ -4,6 +4,7 @@ import time
 import uuid
 
 # https://ngl.link/api/submit
+times = 10
 
 async def send_message(username, question):
     try:
@@ -22,8 +23,6 @@ async def send_message(username, question):
 async def main():
     username = "cottonfarmer112"
     question = "cottonfarmer112"
-    times = 10
-
     tasks = [send_message(username, question) for _ in range(times)]
     await asyncio.gather(*tasks)
 
