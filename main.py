@@ -1,4 +1,6 @@
-import requests
+import aiohttp
+import asyncio
+
 # https://ngl.link/api/submit
 
 username = "cottonfarmer112"
@@ -10,9 +12,12 @@ data = {
     "deviceId": "e6baa765-afad-4885-a06f-13b5d54d7ce7"
 }
 
+async def request():
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.post(url="https://ngl.link/api/submit", data=data):
+                print("sent")
+    except Exception as e:
+        print(e)
 
-try:
-    response = requests.post("https://ngl.link/api/submit", data=data)
-    response.raise_for_status()
-except requests.exceptions.RequestException as e:
-    print(e)
+asyncio.run(request())
