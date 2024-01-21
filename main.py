@@ -5,11 +5,7 @@ import uuid
 
 # https://ngl.link/api/submit
 
-username = "cottonfarmer112"
-question = "cottonfarmer112"
-times = 10
-
-async def request():
+async def send_message(username, question):
     try:
         async with aiohttp.ClientSession() as session:
             random_device_id = uuid.uuid4()
@@ -24,9 +20,12 @@ async def request():
         print(e)
 
 async def main():
-    tasks = [request() for _ in range(times)]
-    await asyncio.gather(*tasks)
+    username = "cottonfarmer112"
+    question = "cottonfarmer112"
+    times = 10
 
+    tasks = [send_message(username, question) for _ in range(times)]
+    await asyncio.gather(*tasks)
 
 start = time.time()
 asyncio.run(main())
