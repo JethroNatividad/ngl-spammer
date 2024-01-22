@@ -38,6 +38,9 @@ async def spam(username, count):
         messages = [line.strip() for line in open('messages.txt', 'r')]
         cf_clearance = open('clearance.txt', 'r').readline().strip()
         user_agent = open('user_agent.txt', 'r').readline().strip()
+        if user_agent == '':
+            return print("Please set the user-agent, refer to the instructions on the readme.md file.")
+
 
         start = time.time() 
         tasks = [send_message(username, messages, cf_clearance, user_agent) for _ in range(count)]
@@ -50,7 +53,7 @@ async def spam(username, count):
 
         print(f"\nTook {seconds} seconds to send {success} out of {count} messages.")
         if success < count:
-            print("Please add a new Cloudflare cookie or check if user-agent is correct. Please follow the instructions on the README.md file.")
+            print("Please add a new Cloudflare cookie. Please follow the instructions on the readme.md file.")
         
 @click.command()
 @click.option('--username','-u', prompt='NGL Username',
