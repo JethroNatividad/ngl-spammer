@@ -17,7 +17,7 @@ async def send_message(username, questions):
                 "deviceId": random_device_id
             }
 
-            cf_clearance = 'T69xcLkCdvaxVb7Sg6XQ3NMaBRsHubrHeIPkq7j5rRg-1705911433-1-AYp3DS2O6xA2+tHvxBB+8p9v/2VSPFOtRKcuINCy48jZU6Doa6LleXLfETUkRSGen23MNL+OgN/d6XheKDoB2wA='
+            cf_clearance = open('clearance.txt', 'r').readline().strip()
 
             headers = {
                 'Host': 'ngl.link',
