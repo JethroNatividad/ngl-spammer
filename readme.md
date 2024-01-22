@@ -49,13 +49,30 @@ This NGL Spammer is optimized for exceptional speed, capable of sending 500 mess
 
 ## Usage
 
+Before running the NGL Spammer, ensure you have obtained the necessary Cloudflare cookie and user agent.
+
 ### Getting `Cloudflare` Cookie
-1. Visit <a href="https://ngl.link" target="_blank">ngl.link</a>.
-2. Complete the CAPTCHA if prompted. Most of the time, it is automatically completed.
-3. Look for `cf_clearance` in the cookies of your browser. Copy the value.
-4. Replace the value in `clearance.txt` with the copied `cf_clearance`.
+
+1. Visit [ngl.link](https://ngl.link).
+2. Complete the CAPTCHA if prompted. If not, it is often automatically completed.
+3. Right-click anywhere on the page and select "Inspect" or press `F12` to open the developer tools.
+4. Go to the "Application" tab.
+5. In the left sidebar, under "Storage," expand the "Cookies" section.
+6. Look for a cookie named `cf_clearance`. Copy the value.
+![cf_clearance](./cf_clearance.png)
+
+7. Replace the value in `clearance.txt` with the copied `cf_clearance`.
 
 Please note that due to the security measures on [ngl.link](https://ngl.link), you might need to repeat the process above approximately every 30 minutes.
+
+### Getting `User Agent`
+1. In the developer tools, navigate to the "Console" tab.
+2. Type `navigator.userAgent` and press Enter.
+![user_agent](./user_agent.png)
+3. Copy the displayed user agent. Make sure not to include the single quotes `''` around the user agent.
+4. Paste the user agent into the `user_agent.txt` file.
+
+
 
 To run the NGL Spammer, use the following command:
 

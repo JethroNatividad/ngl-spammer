@@ -6,11 +6,12 @@ import random
 from pyfiglet import Figlet
 import click
 
-async def send_message(username, questions, cf_clearance):
+async def send_message(username, questions, cf_clearance, user_agent):
     try:
         async with aiohttp.ClientSession() as session:
             random_device_id = uuid.uuid4()
             random_question = random.choice(questions)
+
             data = {
                 "username": username,
                 "question": random_question,
@@ -18,7 +19,7 @@ async def send_message(username, questions, cf_clearance):
             }
 
             headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0',
+                'User-Agent': user_agent,
                 'Cookie': f'cf_clearance={cf_clearance}',
             }
             
@@ -36,9 +37,10 @@ async def send_message(username, questions, cf_clearance):
 async def spam(username, count):
         messages = [line.strip() for line in open('messages.txt', 'r')]
         cf_clearance = open('clearance.txt', 'r').readline().strip()
+        user_agent = open('user_agent.txt', 'r').readline().strip()
 
         start = time.time() 
-        tasks = [send_message(username, messages, cf_clearance) for _ in range(count)]
+        tasks = [send_message(username, messages, cf_clearance, user_agent) for _ in range(count)]
         results = await asyncio.gather(*tasks)
         end = time.time()
 
