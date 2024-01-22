@@ -50,7 +50,7 @@ async def spam(username, count):
 
         print(f"\nTook {seconds} seconds to send {success} out of {count} messages.")
         if success < count:
-            print("Please add a new Cloudflare cookie. Follow the instructions on the README.md file.")
+            print("Please add a new Cloudflare cookie or check if user-agent is correct. Please follow the instructions on the README.md file.")
         
 @click.command()
 @click.option('--username', prompt='NGL Username',
