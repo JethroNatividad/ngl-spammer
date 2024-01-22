@@ -6,7 +6,7 @@ import random
 from pyfiglet import Figlet
 import click
 
-async def send_message(username, questions):
+async def send_message(username, questions, cf_clearance):
     try:
         async with aiohttp.ClientSession() as session:
             random_device_id = uuid.uuid4()
@@ -16,8 +16,6 @@ async def send_message(username, questions):
                 "question": random_question,
                 "deviceId": random_device_id
             }
-
-            cf_clearance = open('clearance.txt', 'r').readline().strip()
 
             headers = {
                 'Host': 'ngl.link',
@@ -50,9 +48,10 @@ async def send_message(username, questions):
 
 async def spam(username, count):
         messages = [line.strip() for line in open('messages.txt', 'r')]
+        cf_clearance = open('clearance.txt', 'r').readline().strip()
 
         start = time.time() 
-        tasks = [send_message(username, messages) for _ in range(count)]
+        tasks = [send_message(username, messages, cf_clearance) for _ in range(count)]
         results = await asyncio.gather(*tasks)
         end = time.time()
 
