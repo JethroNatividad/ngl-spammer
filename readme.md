@@ -49,6 +49,14 @@ This NGL Spammer is optimized for exceptional speed, capable of sending 500 mess
 
 ## Usage
 
+### Getting `Cloudflare` Cookie
+1. Visit [ngl.link](https://ngl.link).
+2. Complete the CAPTCHA if prompted. Most of the time, it is automatically completed.
+3. Look for `cf_clearance` in the cookies of your browser. Copy the value.
+4. Replace the value in `clearance.txt` with the copied `cf_clearance`.
+
+Please note that due to the security measures on [ngl.link](https://ngl.link), you might need to repeat the process above approximately every 30 minutes.
+
 To run the NGL Spammer, use the following command:
 
 
