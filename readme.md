@@ -78,7 +78,7 @@ To run the NGL Spammer, use the following command:
 
 
 ```bash
-python main.py --username <target_username> --count <spam_count>
+python main.py -u <target_username> -c <spam_count>
 ```
 
 Replace `<target_username>` with the NGL username you want to spam and `<spam_count>` with the number of spam messages you want to send.
@@ -86,7 +86,7 @@ Replace `<target_username>` with the NGL username you want to spam and `<spam_co
 ### Example:
 
 ```bash
-python main.py --username john_doe --count 100
+python main.py -u john_doe -c 100
 ```
 
 ### Alternatively, you can run the file directly:

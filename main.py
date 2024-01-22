@@ -53,9 +53,9 @@ async def spam(username, count):
             print("Please add a new Cloudflare cookie or check if user-agent is correct. Please follow the instructions on the README.md file.")
         
 @click.command()
-@click.option('--username', prompt='NGL Username',
+@click.option('--username','-u', prompt='NGL Username',
               help='The username to spam.')
-@click.option('--count', prompt='Spam count', type=int, help='n times to spam.')
+@click.option('--count','-c', prompt='Spam count', type=int, help='n times to spam.')
 def main(username, count):
     asyncio.run(spam(username, count))
 
